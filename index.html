@@ -143,8 +143,66 @@
       <h2 class="text-2xl md:text-3xl font-bold text-center mb-4">Unser Ansatz</h2>
       <p class="text-center text-gray-500 mb-14">Von der Strategie zur Implementierung. Schritt für Schritt.</p>
 
-      <!-- Top row: 3 steps -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+      <!-- Steps with arrow -->
+      <div class="relative hidden md:block" id="approach-container">
+        <!-- Arrow SVG overlay (drawn by JS) -->
+        <svg id="approach-arrow" class="absolute inset-0 w-full h-full pointer-events-none z-0" style="overflow:visible">
+          <defs>
+            <marker id="arrowhead" markerWidth="12" markerHeight="8" refX="11" refY="4" orient="auto">
+              <polygon points="0 0, 12 4, 0 8" fill="#6BA5F2"/>
+            </marker>
+          </defs>
+          <path id="arrow-path" stroke="#6BA5F2" stroke-width="2" fill="none" stroke-dasharray="6 4" opacity="0.35" marker-end="url(#arrowhead)"/>
+        </svg>
+
+        <!-- Top row: 3 steps -->
+        <div class="grid grid-cols-3 gap-6 mb-16 relative z-10">
+          <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+            <div class="flex items-center gap-3 mb-2">
+              <img src="https://img.icons8.com/ios/96/6BA5F2/search.png" alt="" class="w-8 h-8">
+              <h3 class="font-semibold">Standortbestimmung</h3>
+            </div>
+            <p class="text-sm text-gray-500 leading-relaxed">Wo stehen Sie heute? Wo liegt das Potenzial?</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+            <div class="flex items-center gap-3 mb-2">
+              <img src="https://img.icons8.com/ios/96/6BA5F2/conference.png" alt="" class="w-8 h-8">
+              <h3 class="font-semibold">Workshop</h3>
+            </div>
+            <p class="text-sm text-gray-500 leading-relaxed">Gemeinsam Use Cases identifizieren und priorisieren.</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+            <div class="flex items-center gap-3 mb-2">
+              <img src="https://img.icons8.com/ios/96/6BA5F2/cloud-development.png" alt="" class="w-8 h-8">
+              <h3 class="font-semibold">Infrastruktur</h3>
+            </div>
+            <p class="text-sm text-gray-500 leading-relaxed">Souveräne Plattform aufsetzen — sicher und skalierbar.</p>
+          </div>
+        </div>
+
+        <!-- Bottom row: 2 steps, centered -->
+        <div class="relative z-10">
+          <div class="grid grid-cols-2 gap-6 max-w-3xl mx-auto">
+            <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+              <div class="flex items-center gap-3 mb-2">
+                <img src="https://img.icons8.com/ios/96/6BA5F2/rocket.png" alt="" class="w-8 h-8">
+                <h3 class="font-semibold">Umsetzung</h3>
+              </div>
+              <p class="text-sm text-gray-500 leading-relaxed">Anwendungen entwickeln und in Ihre Prozesse integrieren.</p>
+            </div>
+            <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+              <div class="flex items-center gap-3 mb-2">
+                <img src="https://img.icons8.com/ios/96/6BA5F2/bar-chart.png" alt="" class="w-8 h-8">
+                <h3 class="font-semibold">Feedback</h3>
+              </div>
+              <p class="text-sm text-gray-500 leading-relaxed">Messen, lernen, optimieren — kontinuierlich.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile: simple stacked list (no arrow) -->
+      <div class="md:hidden space-y-4">
         <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
           <div class="flex items-center gap-3 mb-2">
             <img src="https://img.icons8.com/ios/96/6BA5F2/search.png" alt="" class="w-8 h-8">
@@ -166,10 +224,6 @@
           </div>
           <p class="text-sm text-gray-500 leading-relaxed">Souveräne Plattform aufsetzen — sicher und skalierbar.</p>
         </div>
-      </div>
-
-      <!-- Bottom row: 2 steps, centered -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
         <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
           <div class="flex items-center gap-3 mb-2">
             <img src="https://img.icons8.com/ios/96/6BA5F2/rocket.png" alt="" class="w-8 h-8">
@@ -218,10 +272,44 @@
       </div>
       <div class="mt-10 pt-6 border-t border-gray-100 text-xs text-gray-400 flex flex-col md:flex-row justify-between gap-2">
         <span>CHE-345.228.221 · LLMify AG</span>
-        <span>&copy; 2025 LLMify AG. Alle Rechte vorbehalten.</span>
+        <span>&copy; 2026 LLMify AG. Alle Rechte vorbehalten.</span>
       </div>
     </div>
   </footer>
 
+  <script>
+    function drawArrow() {
+      const container = document.getElementById('approach-container');
+      if (!container) return;
+      const cards = container.querySelectorAll('.rounded-xl');
+      if (cards.length < 5) return;
+      const r = container.getBoundingClientRect();
+      function mid(el) {
+        const b = el.getBoundingClientRect();
+        return { x: b.left - r.left + b.width / 2, y: b.top - r.top + b.height / 2, right: b.right - r.left, left: b.left - r.left };
+      }
+      const c = Array.from(cards).map(mid);
+      // Path: enter card1 left → exit card1 right → enter card2 left → exit card2 right → enter card3 left → exit card3 right → curve down → enter card4 left → exit card4 right → enter card5 left → exit card5 right
+      const g = 50;
+      const midY = (c[2].y + c[3].y) / 2;
+      const halfDy = (c[3].y - c[2].y) / 4;
+      const d = [
+        // Enter before card1, straight through top row
+        `M ${c[0].left - g},${c[0].y}`,
+        `L ${c[2].right + 8},${c[2].y}`,
+        // Right semicircle: row1 → mid-gap
+        `A ${halfDy},${halfDy} 0 0 1 ${c[2].right + 8},${midY}`,
+        // Straight across the gap (right to left)
+        `L ${c[3].left - 8},${midY}`,
+        // Left semicircle: mid-gap → row2
+        `A ${halfDy},${halfDy} 0 0 0 ${c[3].left - 8},${c[3].y}`,
+        // Through card4 → card5, exit past card5
+        `L ${c[4].right + g},${c[4].y}`,
+      ].join(' ');
+      document.getElementById('arrow-path').setAttribute('d', d);
+    }
+    window.addEventListener('load', drawArrow);
+    window.addEventListener('resize', drawArrow);
+  </script>
 </body>
 </html>
