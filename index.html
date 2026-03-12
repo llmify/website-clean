@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LLMify — Souveräne KI-Infrastruktur für Schweizer Unternehmen</title>
+  <meta name="description" content="KI-Infrastruktur. Souverän. In der Schweiz. Open-Source-Modelle auf eigener Infrastruktur — ohne Abhängigkeit von US-Cloud-Anbietern.">
+  <meta property="og:title" content="LLMify — Souveräne KI-Infrastruktur">
+  <meta property="og:description" content="Wir bauen KI-Lösungen, bei denen Ihre Daten Ihr Unternehmen nicht verlassen.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="de_CH">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: '#6BA5F2',
+            'brand-dark': '#4A8CE8',
+            'brand-light': '#F0F6FF',
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body class="font-sans text-[#1A1A1A] bg-white antialiased">
+
+  <!-- Nav -->
+  <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-gray-100">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#">
+        <img src="full_logo_black.png" alt="LLMify" class="h-8">
+      </a>
+      <div class="relative">
+        <button id="lang-toggle" class="flex items-center gap-1.5 text-sm font-medium text-gray-500 hover:text-[#1A1A1A] transition-colors">
+          DE
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="pt-20 pb-8 md:pt-32 md:pb-12">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h1 class="text-4xl md:text-6xl font-bold leading-tight tracking-tight">
+        KI-Infrastruktur.<br>
+        Souverän. In&nbsp;der&nbsp;Schweiz.
+      </h1>
+      <p class="mt-6 text-lg md:text-xl text-gray-500 max-w-2xl mx-auto leading-relaxed">
+        Wir bauen KI-Lösungen, bei denen Ihre Daten Ihr Unternehmen nicht verlassen.
+        Open-Source-Modelle, eigene Infrastruktur, volle Kontrolle.
+      </p>
+      <div class="mt-10">
+        <a href="mailto:info@llmify.ch"
+           class="inline-block bg-brand hover:bg-brand-dark text-white font-medium px-8 py-3.5 rounded-lg transition-colors text-base">
+          E-Mail schreiben
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Chat Screenshot -->
+  <section class="pb-16 md:pb-24">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="relative rounded-xl shadow-2xl overflow-hidden border border-gray-200">
+        <img src="llmify_chat.png" alt="LLMify Chat Interface" class="w-full block">
+        <div class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sovereignty Pitch -->
+  <section class="py-20 md:py-28 bg-brand-light">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <img src="https://img.icons8.com/ios/96/6BA5F2/security-checked.png" alt="" class="w-12 h-12 mx-auto mb-8">
+      <p class="text-xl md:text-2xl leading-relaxed text-gray-700">
+        Die meisten Schweizer Unternehmen betreiben ihre KI auf amerikanischer Infrastruktur.
+      </p>
+      <p class="mt-4 text-xl md:text-2xl leading-relaxed text-gray-700">
+        Das ist kein technisches Problem — es ist ein <span class="text-[#1A1A1A] font-semibold">strategisches</span>.
+      </p>
+      <p class="mt-6 text-2xl md:text-3xl font-bold text-[#1A1A1A]">
+        Wir ändern das.
+      </p>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="leistungen" class="py-16 md:py-24">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-14">Unsere Leistungen</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <!-- Service 1 -->
+        <div class="text-center">
+          <img src="https://img.icons8.com/ios/96/6BA5F2/compass.png" alt="" class="w-12 h-12 mx-auto mb-5">
+          <h3 class="text-lg font-semibold mb-3">KI-Strategie Workshop</h3>
+          <p class="text-gray-500 leading-relaxed">
+            Klare Analyse, wo KI in Ihrem Unternehmen Wirkung zeigt. Ohne Buzzwords.
+          </p>
+        </div>
+        <!-- Service 2 -->
+        <div class="text-center">
+          <img src="https://img.icons8.com/ios/96/6BA5F2/server.png" alt="" class="w-12 h-12 mx-auto mb-5">
+          <h3 class="text-lg font-semibold mb-3">Private KI-Infrastruktur</h3>
+          <p class="text-gray-500 leading-relaxed">
+            Open-Source-Modelle auf Schweizer Infrastruktur. Ihre Daten bleiben bei Ihnen.
+          </p>
+        </div>
+        <!-- Service 3 -->
+        <div class="text-center">
+          <img src="https://img.icons8.com/ios/96/6BA5F2/code.png" alt="" class="w-12 h-12 mx-auto mb-5">
+          <h3 class="text-lg font-semibold mb-3">KI-Applikationen</h3>
+          <p class="text-gray-500 leading-relaxed">
+            Massgeschneiderte Anwendungen für Ihre Geschäftsprozesse.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Approach -->
+  <section class="py-20 md:py-28 bg-brand-light">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-4">Unser Ansatz</h2>
+      <p class="text-center text-gray-500 mb-14">Von der Strategie zur Implementierung. Schritt für Schritt.</p>
+
+      <!-- Top row: 3 steps -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+          <div class="flex items-center gap-3 mb-2">
+            <img src="https://img.icons8.com/ios/96/6BA5F2/search.png" alt="" class="w-8 h-8">
+            <h3 class="font-semibold">Standortbestimmung</h3>
+          </div>
+          <p class="text-sm text-gray-500 leading-relaxed">Wo stehen Sie heute? Wo liegt das Potenzial?</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+          <div class="flex items-center gap-3 mb-2">
+            <img src="https://img.icons8.com/ios/96/6BA5F2/conference.png" alt="" class="w-8 h-8">
+            <h3 class="font-semibold">Workshop</h3>
+          </div>
+          <p class="text-sm text-gray-500 leading-relaxed">Gemeinsam Use Cases identifizieren und priorisieren.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+          <div class="flex items-center gap-3 mb-2">
+            <img src="https://img.icons8.com/ios/96/6BA5F2/cloud-development.png" alt="" class="w-8 h-8">
+            <h3 class="font-semibold">Infrastruktur</h3>
+          </div>
+          <p class="text-sm text-gray-500 leading-relaxed">Souveräne Plattform aufsetzen — sicher und skalierbar.</p>
+        </div>
+      </div>
+
+      <!-- Bottom row: 2 steps, centered -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+          <div class="flex items-center gap-3 mb-2">
+            <img src="https://img.icons8.com/ios/96/6BA5F2/rocket.png" alt="" class="w-8 h-8">
+            <h3 class="font-semibold">Umsetzung</h3>
+          </div>
+          <p class="text-sm text-gray-500 leading-relaxed">Anwendungen entwickeln und in Ihre Prozesse integrieren.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+          <div class="flex items-center gap-3 mb-2">
+            <img src="https://img.icons8.com/ios/96/6BA5F2/bar-chart.png" alt="" class="w-8 h-8">
+            <h3 class="font-semibold">Feedback</h3>
+          </div>
+          <p class="text-sm text-gray-500 leading-relaxed">Messen, lernen, optimieren — kontinuierlich.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-12 md:py-16 border-t border-gray-100">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 items-start">
+        <!-- Logo -->
+        <div>
+          <img src="full_logo_black.png" alt="LLMify" class="h-7 mb-4">
+          <p class="text-sm text-gray-400">Souveräne KI-Infrastruktur<br>für Schweizer Unternehmen.</p>
+        </div>
+        <!-- Contact -->
+        <div class="text-sm text-gray-500 leading-relaxed">
+          <p class="font-medium text-[#1A1A1A] mb-2">Kontakt</p>
+          <p>LLMify AG</p>
+          <p>Alte Steinhauserstrasse 19</p>
+          <p>6330 Cham</p>
+          <p class="mt-2">
+            <a href="mailto:info@llmify.ch" class="text-brand hover:text-brand-dark transition-colors">info@llmify.ch</a>
+          </p>
+        </div>
+        <!-- Links -->
+        <div class="text-sm text-gray-500">
+          <p class="font-medium text-[#1A1A1A] mb-2">Links</p>
+          <a href="https://www.linkedin.com/company/llmify" target="_blank" rel="noopener noreferrer"
+             class="text-brand hover:text-brand-dark transition-colors">
+            LinkedIn
+          </a>
+        </div>
+      </div>
+      <div class="mt-10 pt-6 border-t border-gray-100 text-xs text-gray-400 flex flex-col md:flex-row justify-between gap-2">
+        <span>CHE-345.228.221 · LLMify AG</span>
+        <span>&copy; 2025 LLMify AG. Alle Rechte vorbehalten.</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
