@@ -88,7 +88,8 @@
   </section>
 
   <!-- Services: Scroll-driven Stack -->
-  <section id="leistungen" class="relative" style="height: 280vh;">
+  <section id="leistungen" class="relative" style="height: 200vh;">
+    <style>@media(min-width:768px){#leistungen{height:320vh!important;}}</style>
     <div class="sticky top-0 h-screen flex flex-col items-center justify-center">
       <h2 class="text-2xl md:text-3xl font-bold text-center mb-3">Der ganze KI-Stack</h2>
       <p class="text-gray-500 text-center mb-10 max-w-md mx-auto">Von der Strategie bis zur massgeschneiderten Applikation — alles aus einer Hand.</p>
@@ -96,7 +97,7 @@
       <div class="w-full max-w-xl mx-auto px-6 flex flex-col" id="stack-container">
 
         <!-- Strategie -->
-        <div class="stack-layer" style="--layer-color: #3B7DD8;">
+        <div class="stack-layer" style="--layer-color: #6BA5F2;">
           <div class="stack-bar">
             <div class="stack-icon">
               <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582"/></svg>
@@ -109,7 +110,7 @@
         </div>
 
         <!-- Infrastruktur -->
-        <div class="stack-layer" style="--layer-color: #3B7DD8;">
+        <div class="stack-layer" style="--layer-color: #6BA5F2;">
           <div class="stack-bar">
             <div class="stack-icon">
               <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 14.25h13.5m-13.5 0a3 3 0 01-3-3m3 3a3 3 0 100 6h13.5a3 3 0 100-6m-16.5-3a3 3 0 013-3h13.5a3 3 0 013 3m-19.5 0a4.5 4.5 0 01.9-2.7L5.737 5.1a3.375 3.375 0 012.7-1.35h7.126c1.062 0 2.062.5 2.7 1.35l2.587 3.45a4.5 4.5 0 01.9 2.7"/></svg>
@@ -122,7 +123,7 @@
         </div>
 
         <!-- Applikationen -->
-        <div class="stack-layer" style="--layer-color: #3B7DD8;">
+        <div class="stack-layer" style="--layer-color: #6BA5F2;">
           <div class="stack-bar">
             <div class="stack-icon">
               <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"/></svg>
@@ -376,7 +377,7 @@
           // Keep bar centered
 
           // Detail text
-          detail.style.maxHeight = (detailProgress * 100) + 'px';
+          detail.style.maxHeight = (detailProgress * 200) + 'px';
           detail.style.opacity = detailProgress;
         });
       }
