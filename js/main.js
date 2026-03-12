@@ -115,7 +115,7 @@ document.addEventListener('click', function() {
     var progress = Math.max(0, Math.min(1, -rect.top / scrollRange));
 
     var sepProgress = Math.min(1, progress / 0.4);
-    var detailProgress = Math.max(0, Math.min(1, (progress - 0.3) / 0.4));
+    var detailProgress = Math.max(0, Math.min(1, (progress - 0.3) / 0.5));
 
     var startGap = 4;
     var maxGap = 16;
