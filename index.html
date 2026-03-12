@@ -82,17 +82,53 @@
 
   <!-- Sovereignty Pitch -->
   <section class="py-20 md:py-28 bg-brand-light">
-    <div class="max-w-3xl mx-auto px-6 text-center">
-      <img src="https://img.icons8.com/ios/96/6BA5F2/security-checked.png" alt="" class="w-12 h-12 mx-auto mb-8">
-      <p class="text-xl md:text-2xl leading-relaxed text-gray-700">
-        Die meisten Schweizer Unternehmen betreiben ihre KI auf amerikanischer Infrastruktur.
-      </p>
-      <p class="mt-4 text-xl md:text-2xl leading-relaxed text-gray-700">
-        Das ist kein technisches Problem — es ist ein <span class="text-[#1A1A1A] font-semibold">strategisches</span>.
-      </p>
-      <p class="mt-6 text-2xl md:text-3xl font-bold text-[#1A1A1A]">
-        Wir ändern das.
-      </p>
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row items-center gap-10 md:gap-16">
+        <!-- Europe map with Switzerland pin -->
+        <div class="flex-shrink-0 w-48 md:w-64">
+          <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full">
+            <!-- Simplified Europe outline -->
+            <path d="M180 60 L200 55 L220 58 L240 52 L260 60 L270 55 L285 62 L290 75 L280 85 L290 95 L285 110 L295 115 L305 108 L320 112 L330 105 L340 110 L335 125 L325 130 L330 140 L320 150 L310 148 L300 155 L305 165 L295 170 L285 165 L275 175 L265 170 L255 180 L260 190 L250 200 L240 195 L230 205 L225 220 L215 230 L220 245 L210 255 L200 250 L195 260 L185 265 L175 258 L165 270 L155 275 L145 268 L140 280 L130 285 L125 295 L115 290 L110 300 L100 295 L95 285 L105 275 L100 265 L90 260 L85 250 L90 240 L80 235 L75 225 L85 215 L80 205 L90 195 L85 185 L95 175 L90 165 L100 155 L95 145 L105 135 L110 125 L100 118 L105 108 L115 105 L120 95 L110 88 L115 78 L125 75 L135 80 L145 72 L155 68 L165 72 L175 65 Z"
+                  fill="#6BA5F2" fill-opacity="0.12" stroke="#6BA5F2" stroke-width="1.5" stroke-opacity="0.4"/>
+            <!-- Scandinavia -->
+            <path d="M210 30 L215 20 L225 25 L220 40 L230 45 L225 55 L215 50 L210 42 Z M235 15 L245 10 L250 20 L255 35 L248 45 L240 42 L238 30 Z"
+                  fill="#6BA5F2" fill-opacity="0.08" stroke="#6BA5F2" stroke-width="1" stroke-opacity="0.3"/>
+            <!-- UK/Ireland -->
+            <path d="M105 105 L115 98 L125 102 L128 115 L120 122 L108 118 Z M90 108 L100 105 L102 115 L95 120 Z"
+                  fill="#6BA5F2" fill-opacity="0.08" stroke="#6BA5F2" stroke-width="1" stroke-opacity="0.3"/>
+            <!-- Iberian Peninsula -->
+            <path d="M80 235 L95 225 L110 230 L120 228 L125 240 L130 255 L120 268 L105 272 L90 265 L78 250 Z"
+                  fill="#6BA5F2" fill-opacity="0.08" stroke="#6BA5F2" stroke-width="1" stroke-opacity="0.3"/>
+            <!-- Italy -->
+            <path d="M225 220 L230 230 L235 245 L240 260 L235 270 L228 265 L225 250 L220 240 Z M240 275 L250 270 L255 280 L245 285 Z"
+                  fill="#6BA5F2" fill-opacity="0.08" stroke="#6BA5F2" stroke-width="1" stroke-opacity="0.3"/>
+            <!-- Switzerland highlight -->
+            <rect x="183" y="188" width="30" height="20" rx="4" fill="#6BA5F2" fill-opacity="0.25" stroke="#6BA5F2" stroke-width="1.5"/>
+            <!-- Pin -->
+            <g transform="translate(198, 168)">
+              <path d="M0 28 L-10 -2 Q-12 -12 -6 -18 Q0 -24 6 -18 Q12 -12 10 -2 Z" fill="#6BA5F2"/>
+              <circle cx="0" cy="-10" r="5" fill="white"/>
+            </g>
+            <!-- Pin pulse animation -->
+            <circle cx="198" cy="158" r="8" fill="none" stroke="#6BA5F2" stroke-width="1" opacity="0.6">
+              <animate attributeName="r" values="8;18" dur="2s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.6;0" dur="2s" repeatCount="indefinite"/>
+            </circle>
+          </svg>
+        </div>
+        <!-- Text -->
+        <div class="text-center md:text-left">
+          <p class="text-xl md:text-2xl leading-relaxed text-gray-700">
+            Die meisten Schweizer Unternehmen betreiben ihre KI auf amerikanischer Infrastruktur.
+          </p>
+          <p class="mt-4 text-xl md:text-2xl leading-relaxed text-gray-700">
+            Das ist kein technisches Problem — es ist ein <span class="text-[#1A1A1A] font-semibold">strategisches</span>.
+          </p>
+          <p class="mt-6 text-2xl md:text-3xl font-bold text-[#1A1A1A]">
+            Wir ändern das.
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 
