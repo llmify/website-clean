@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://llmify.ch/website-clean/sitemap.xml
