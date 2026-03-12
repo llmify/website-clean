@@ -31,17 +31,28 @@
   </script>
   <style>
     html { scroll-behavior: smooth; }
+    .fade-to-blue { background: linear-gradient(to bottom, #FFFFFF, #F0F6FF); }
+    .fade-from-blue { background: linear-gradient(to bottom, #F0F6FF, #FFFFFF); }
+    .fade-to-blue-2 { background: linear-gradient(to bottom, #FFFFFF, #F0F6FF); }
+    .fade-from-blue-2 { background: linear-gradient(to bottom, #F0F6FF, #FFFFFF); }
+    .nav-link.active { color: #6BA5F2; }
   </style>
 </head>
 <body class="font-sans text-[#1A1A1A] bg-white antialiased">
 
   <!-- Nav -->
   <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-gray-100">
-    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-      <a href="#">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between relative">
+      <a href="#" class="flex-shrink-0">
         <img src="full_logo_black.png" alt="LLMify" class="h-8">
       </a>
-      <div class="relative">
+      <div class="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2" id="nav-links">
+        <a href="#start" class="nav-link text-sm font-medium text-gray-400 hover:text-[#1A1A1A] transition-colors">Start</a>
+        <a href="#leistungen" class="nav-link text-sm font-medium text-gray-400 hover:text-[#1A1A1A] transition-colors">Leistungen</a>
+        <a href="#ansatz" class="nav-link text-sm font-medium text-gray-400 hover:text-[#1A1A1A] transition-colors">Ansatz</a>
+        <a href="#kontakt" class="nav-link text-sm font-medium text-gray-400 hover:text-[#1A1A1A] transition-colors">Kontakt</a>
+      </div>
+      <div class="relative flex-shrink-0">
         <button id="lang-toggle" class="flex items-center gap-1.5 text-sm font-medium text-gray-500 hover:text-[#1A1A1A] transition-colors">
           DE
           <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
@@ -51,7 +62,7 @@
   </nav>
 
   <!-- Hero -->
-  <section class="pt-20 pb-8 md:pt-32 md:pb-12">
+  <section id="start" class="pt-20 pb-8 md:pt-32 md:pb-12">
     <div class="max-w-4xl mx-auto px-6 text-center">
       <h1 class="text-4xl md:text-6xl font-bold leading-tight tracking-tight">
         KI-Infrastruktur.<br>
@@ -71,7 +82,7 @@
   </section>
 
   <!-- Chat Screenshot -->
-  <section class="pb-16 md:pb-24">
+  <section class="pb-10 md:pb-14">
     <div class="max-w-4xl mx-auto px-6">
       <div class="relative rounded-xl shadow-2xl overflow-hidden border border-gray-200">
         <img src="llmify_chat.png" alt="LLMify Chat Interface" class="w-full block">
@@ -81,7 +92,7 @@
   </section>
 
   <!-- Sovereignty Pitch -->
-  <section class="py-4 md:py-6 bg-brand-light">
+  <section class="pt-10 md:pt-14 pb-4 md:pb-6" style="background: linear-gradient(to bottom, #FFFFFF 0%, #F0F6FF 30%, #F0F6FF 100%)">
     <div class="max-w-5xl mx-auto px-6">
       <div class="flex flex-col md:flex-row items-center gap-6 md:gap-12">
         <!-- Europe map with Switzerland pin -->
@@ -90,13 +101,13 @@
         </div>
         <!-- Text -->
         <div class="text-center md:text-left">
-          <p class="text-xl md:text-2xl leading-relaxed text-gray-700">
+          <p class="text-lg md:text-xl leading-relaxed text-gray-700">
             Die meisten Schweizer Unternehmen betreiben ihre KI auf amerikanischer Infrastruktur.
           </p>
-          <p class="mt-4 text-xl md:text-2xl leading-relaxed text-gray-700">
+          <p class="mt-3 text-lg md:text-xl leading-relaxed text-gray-700">
             Das ist kein technisches Problem — es ist ein <span class="text-[#1A1A1A] font-semibold">strategisches</span>.
           </p>
-          <p class="mt-6 text-2xl md:text-3xl font-bold text-[#1A1A1A]">
+          <p class="mt-5 text-xl md:text-2xl font-bold text-[#1A1A1A]">
             Wir ändern das.
           </p>
         </div>
@@ -105,40 +116,70 @@
   </section>
 
   <!-- Services -->
-  <section id="leistungen" class="py-16 md:py-24">
-    <div class="max-w-6xl mx-auto px-6">
-      <h2 class="text-2xl md:text-3xl font-bold text-center mb-14">Unsere Leistungen</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-        <!-- Service 1 -->
-        <div class="text-center">
-          <img src="https://img.icons8.com/ios/96/6BA5F2/compass.png" alt="" class="w-12 h-12 mx-auto mb-5">
-          <h3 class="text-lg font-semibold mb-3">KI-Strategie Workshop</h3>
+  <section id="leistungen" class="pt-10 md:pt-14 pb-16 md:pb-24" style="background: linear-gradient(to bottom, #F0F6FF 0%, #FFFFFF 20%, #FFFFFF 100%)">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-16">Unsere Leistungen</h2>
+
+      <!-- Service 1: Workshop — image left, text right -->
+      <div class="flex flex-col md:flex-row items-center gap-10 md:gap-16 mb-20">
+        <div class="md:w-1/2">
+          <div class="relative rounded-xl overflow-hidden shadow-lg border border-gray-100 bg-white p-4">
+            <img src="fahrplan.svg" alt="KI-Integrations Fahrplan" class="w-full">
+            <div class="absolute inset-0 rounded-xl" style="background: radial-gradient(ellipse at center, transparent 50%, white 100%)"></div>
+          </div>
+        </div>
+        <div class="md:w-1/2">
+          <h3 class="text-xl md:text-2xl font-bold mb-4">KI-Strategie & Planung</h3>
           <p class="text-gray-500 leading-relaxed">
             Klare Analyse, wo KI in Ihrem Unternehmen Wirkung zeigt. Ohne Buzzwords.
+            Gemeinsam identifizieren wir Use Cases, priorisieren nach Wirkung und Machbarkeit,
+            und erarbeiten eine konkrete Roadmap.
           </p>
         </div>
-        <!-- Service 2 -->
-        <div class="text-center">
-          <img src="https://img.icons8.com/ios/96/6BA5F2/server.png" alt="" class="w-12 h-12 mx-auto mb-5">
-          <h3 class="text-lg font-semibold mb-3">Private KI-Infrastruktur</h3>
+      </div>
+
+      <!-- Service 2: Infra — text left, image right -->
+      <div class="flex flex-col md:flex-row-reverse items-center gap-10 md:gap-16 mb-20">
+        <div class="md:w-1/2">
+          <div class="relative rounded-xl overflow-hidden shadow-lg border border-gray-100">
+            <img src="server.png" alt="Private KI-Infrastruktur" class="w-full">
+            <div class="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-white/60"></div>
+          </div>
+        </div>
+        <div class="md:w-1/2">
+          <h3 class="text-xl md:text-2xl font-bold mb-4">Private KI-Infrastruktur</h3>
           <p class="text-gray-500 leading-relaxed">
-            Open-Source-Modelle auf Schweizer Infrastruktur. Ihre Daten bleiben bei Ihnen.
+            Open-Source-Modelle auf Schweizer Infrastruktur — on-premise oder in der souveränen Swiss Cloud.
+            Ihre Daten bleiben bei Ihnen, ohne Abhängigkeit von US-Anbietern. Volle Kontrolle, volle Compliance.
           </p>
         </div>
-        <!-- Service 3 -->
-        <div class="text-center">
-          <img src="https://img.icons8.com/ios/96/6BA5F2/code.png" alt="" class="w-12 h-12 mx-auto mb-5">
-          <h3 class="text-lg font-semibold mb-3">KI-Applikationen</h3>
+      </div>
+
+      <!-- Service 3: Apps — image left, text right -->
+      <div class="flex flex-col md:flex-row items-center gap-10 md:gap-16">
+        <div class="md:w-1/2">
+          <div class="relative rounded-xl overflow-hidden shadow-lg border border-gray-100">
+            <img src="rag-app.png" alt="KI-Applikation mit RAG" class="w-full">
+            <div class="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-white/60"></div>
+          </div>
+        </div>
+        <div class="md:w-1/2">
+          <h3 class="text-xl md:text-2xl font-bold mb-4">KI-Applikationen</h3>
           <p class="text-gray-500 leading-relaxed">
             Massgeschneiderte Anwendungen für Ihre Geschäftsprozesse.
+            Von intelligenter Dokumentensuche mit nachvollziehbaren Quellenverweisen
+            bis zu vollautomatisierten Agent-Workflows.
           </p>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Transition: white → blue -->
+  <div class="h-16 md:h-24 fade-to-blue-2"></div>
+
   <!-- Approach -->
-  <section class="py-20 md:py-28 bg-brand-light">
+  <section id="ansatz" class="py-20 md:py-28 bg-brand-light">
     <div class="max-w-5xl mx-auto px-6">
       <h2 class="text-2xl md:text-3xl font-bold text-center mb-4">Unser Ansatz</h2>
       <p class="text-center text-gray-500 mb-14">Von der Strategie zur Implementierung. Schritt für Schritt.</p>
@@ -242,8 +283,11 @@
     </div>
   </section>
 
+  <!-- Transition: blue → white -->
+  <div class="h-16 md:h-24 fade-from-blue-2"></div>
+
   <!-- Footer -->
-  <footer class="py-12 md:py-16 border-t border-gray-100">
+  <footer id="kontakt" class="py-12 md:py-16 border-t border-gray-100">
     <div class="max-w-6xl mx-auto px-6">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-10 items-start">
         <!-- Logo -->
@@ -310,6 +354,24 @@
     }
     window.addEventListener('load', drawArrow);
     window.addEventListener('resize', drawArrow);
+
+    // Active nav highlight on scroll
+    const navLinks = document.querySelectorAll('.nav-link');
+    const navSections = document.querySelectorAll('#start, #leistungen, #ansatz, #kontakt');
+    window.addEventListener('scroll', () => {
+      let current = '';
+      const atBottom = (window.innerHeight + window.scrollY) >= document.body.offsetHeight - 50;
+      if (atBottom) {
+        current = 'kontakt';
+      } else {
+        navSections.forEach(s => {
+          if (window.scrollY >= s.offsetTop - 200) current = s.id;
+        });
+      }
+      navLinks.forEach(l => {
+        l.classList.toggle('active', l.getAttribute('href') === '#' + current);
+      });
+    });
   </script>
 </body>
 </html>
