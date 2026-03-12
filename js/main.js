@@ -135,7 +135,7 @@ document.addEventListener('click', function() {
         : 'none';
 
       detail.style.maxHeight = (detailProgress * 200) + 'px';
-      detail.style.opacity = detailProgress;
+      detail.style.opacity = Math.min(1, detailProgress * 2.5);
     });
   }
 
