@@ -4,30 +4,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LLMify — Souveräne KI-Infrastruktur für Schweizer Unternehmen</title>
-  <meta name="description" content="KI-Infrastruktur. Souverän. In der Schweiz. Open-Source-Modelle auf eigener Infrastruktur — ohne Abhängigkeit von US-Cloud-Anbietern.">
+  <meta name="description" content="KI-Infrastruktur. Souverän. In der Schweiz. Open-Source-Modelle auf eigener Infrastruktur. Ohne Abhängigkeit von US-Cloud-Anbietern.">
   <meta property="og:title" content="LLMify — Souveräne KI-Infrastruktur">
   <meta property="og:description" content="Wir bauen KI-Lösungen, bei denen Ihre Daten Ihr Unternehmen nicht verlassen.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="de_CH">
   <meta property="og:url" content="https://llmify.ch/website-clean/">
-  <meta property="og:image" content="https://llmify.ch/website-clean/llmify_icon.png">
+  <meta property="og:image" content="https://llmify.ch/website-clean/assets/llmify_icon.png">
   <meta property="og:site_name" content="LLMify">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="LLMify — Souveräne KI-Infrastruktur">
   <meta name="twitter:description" content="Wir bauen KI-Lösungen, bei denen Ihre Daten Ihr Unternehmen nicht verlassen.">
-  <meta name="twitter:image" content="https://llmify.ch/website-clean/llmify_icon.png">
+  <meta name="twitter:image" content="https://llmify.ch/website-clean/assets/llmify_icon.png">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://llmify.ch/website-clean/">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
-  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "LLMify AG",
     "url": "https://llmify.ch/website-clean/",
-    "logo": "https://llmify.ch/website-clean/llmify_icon.png",
+    "logo": "https://llmify.ch/website-clean/assets/llmify_icon.png",
     "description": "Souveräne KI-Infrastruktur für Schweizer Unternehmen. Open-Source-Modelle auf eigener Infrastruktur.",
     "address": {
       "@type": "PostalAddress",
@@ -60,80 +60,7 @@
       }
     }
   </script>
-  <style>
-    html { scroll-behavior: smooth; }
-    .nav-link.active { color: #6BA5F2; }
-    /* Modal overlay */
-    .modal-overlay {
-      display: none;
-      position: fixed;
-      inset: 0;
-      z-index: 100;
-      background: rgba(0,0,0,0.5);
-      align-items: center;
-      justify-content: center;
-    }
-    .modal-overlay.open {
-      display: flex;
-    }
-    .modal-card {
-      background: white;
-      border-radius: 0.75rem;
-      max-width: 640px;
-      width: 90%;
-      max-height: 85vh;
-      overflow-y: auto;
-      padding: 2rem;
-      position: relative;
-    }
-    .modal-close {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      background: none;
-      border: none;
-      font-size: 1.5rem;
-      cursor: pointer;
-      color: #999;
-      line-height: 1;
-      padding: 0.25rem;
-    }
-    .modal-close:hover { color: #333; }
-    .modal-card h2 { font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; }
-    .modal-card h3 { font-size: 1.1rem; font-weight: 600; margin-top: 1.25rem; margin-bottom: 0.5rem; }
-    .modal-card p, .modal-card li { font-size: 0.875rem; color: #555; line-height: 1.7; }
-    .modal-card ul { list-style: disc; padding-left: 1.25rem; margin-bottom: 0.75rem; }
-    /* Language dropdown */
-    .lang-dropdown {
-      display: none;
-      position: absolute;
-      top: 100%;
-      right: 0;
-      margin-top: 0.25rem;
-      background: white;
-      border: 1px solid #e5e7eb;
-      border-radius: 0.5rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      overflow: hidden;
-      z-index: 60;
-    }
-    .lang-dropdown.open { display: block; }
-    .lang-option {
-      display: block;
-      width: 100%;
-      padding: 0.5rem 1.25rem;
-      text-align: left;
-      font-size: 0.875rem;
-      font-weight: 500;
-      color: #555;
-      background: none;
-      border: none;
-      cursor: pointer;
-      white-space: nowrap;
-    }
-    .lang-option:hover { background: #F0F6FF; color: #1A1A1A; }
-    .lang-option.active { color: #6BA5F2; font-weight: 600; }
-  </style>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="font-sans text-[#1A1A1A] bg-white antialiased">
 
@@ -141,7 +68,7 @@
   <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-gray-100">
     <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between relative">
       <a href="#" class="flex-shrink-0">
-        <img src="full_logo_black.png" alt="LLMify" class="h-8">
+        <img src="assets/full_logo_black.png" alt="LLMify" class="h-8">
       </a>
       <div class="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2" id="nav-links">
         <a href="#start" class="nav-link text-sm font-medium text-gray-400 hover:text-[#1A1A1A] transition-colors" data-i18n="nav_start">Start</a>
@@ -188,7 +115,7 @@
   <section class="pb-16 md:pb-24">
     <div class="max-w-4xl mx-auto px-6">
       <div class="relative rounded-xl shadow-2xl overflow-hidden border border-gray-200">
-        <img src="llmify_chat.png" alt="LLMify Chat Interface" class="w-full block">
+        <img src="assets/llmify_chat.png" alt="LLMify Chat Interface" class="w-full block">
         <div class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent"></div>
       </div>
     </div>
@@ -198,7 +125,7 @@
   <section id="leistungen" class="relative" style="height: 280vh;">
     <div class="sticky top-0 h-screen flex flex-col items-center justify-center">
       <h2 class="text-2xl md:text-3xl font-bold text-center mb-3" data-i18n="stack_title">Der ganze KI-Stack</h2>
-      <p class="text-gray-500 text-center mb-10 max-w-md mx-auto" data-i18n="stack_subtitle">Von der Strategie bis zur massgeschneiderten Applikation — alles aus einer Hand.</p>
+      <p class="text-gray-500 text-center mb-10 max-w-md mx-auto" data-i18n="stack_subtitle">Von der Strategie bis zur massgeschneiderten Applikation. Alles aus einer Hand.</p>
 
       <div class="w-full max-w-xl mx-auto px-6 flex flex-col" id="stack-container">
 
@@ -224,7 +151,7 @@
             <span class="stack-label" data-i18n="stack_infra">Infrastruktur</span>
           </div>
           <div class="stack-detail">
-            <p data-i18n="stack_infra_desc">Open-Source-Modelle auf Schweizer Infrastruktur — on-premise oder in der souveränen Swiss Cloud. Ihre Daten bleiben bei Ihnen. Volle Kontrolle, volle Compliance.</p>
+            <p data-i18n="stack_infra_desc">Open-Source-Modelle auf Schweizer Infrastruktur, on-premise oder in der souveränen Swiss Cloud. Ihre Daten bleiben bei Ihnen. Volle Kontrolle, volle Compliance.</p>
           </div>
         </div>
 
@@ -245,46 +172,6 @@
     </div>
   </section>
 
-  <style>
-    .stack-layer {
-      background: var(--layer-color);
-      overflow: hidden;
-    }
-    /* Collapsed: colored bar with centered icon + label */
-    .stack-bar {
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      gap: 0.75rem;
-      padding: 0.9rem 1.5rem;
-    }
-    .stack-icon {
-      color: white;
-      opacity: 0.9;
-      flex-shrink: 0;
-    }
-    .stack-label {
-      font-weight: 600;
-      font-size: 1rem;
-      color: white;
-      letter-spacing: 0.01em;
-    }
-    /* Expanded: white card with colored left border */
-    .stack-detail {
-      max-height: 0;
-      opacity: 0;
-      overflow: hidden;
-      padding: 0 1.25rem;
-      text-align: left;
-    }
-    .stack-detail p {
-      color: rgba(255,255,255,0.85);
-      font-size: 0.875rem;
-      line-height: 1.7;
-      padding-bottom: 1rem;
-    }
-  </style>
-
   <!-- Approach -->
   <section id="ansatz" class="py-20 md:py-28" style="background: linear-gradient(to bottom, #FFFFFF 0%, #F0F6FF 15%, #F0F6FF 100%)">
     <div class="max-w-5xl mx-auto px-6">
@@ -293,7 +180,6 @@
 
       <!-- Steps with arrow -->
       <div class="relative hidden md:block" id="approach-container">
-        <!-- Arrow SVG overlay (drawn by JS) -->
         <svg id="approach-arrow" class="absolute inset-0 w-full h-full pointer-events-none z-0" style="overflow:visible">
           <defs>
             <marker id="arrowhead" markerWidth="12" markerHeight="8" refX="11" refY="4" orient="auto">
@@ -324,7 +210,7 @@
               <img src="https://img.icons8.com/ios/96/6BA5F2/cloud-development.png" alt="" class="w-8 h-8">
               <h3 class="font-semibold" data-i18n="approach_step3">Infrastruktur</h3>
             </div>
-            <p class="text-sm text-gray-500 leading-relaxed" data-i18n="approach_step3_desc">Souveräne Plattform aufsetzen — sicher und skalierbar.</p>
+            <p class="text-sm text-gray-500 leading-relaxed" data-i18n="approach_step3_desc">Souveräne Plattform aufsetzen. Sicher und skalierbar.</p>
           </div>
         </div>
 
@@ -343,13 +229,13 @@
                 <img src="https://img.icons8.com/ios/96/6BA5F2/bar-chart.png" alt="" class="w-8 h-8">
                 <h3 class="font-semibold" data-i18n="approach_step5">Feedback</h3>
               </div>
-              <p class="text-sm text-gray-500 leading-relaxed" data-i18n="approach_step5_desc">Messen, lernen, optimieren — kontinuierlich.</p>
+              <p class="text-sm text-gray-500 leading-relaxed" data-i18n="approach_step5_desc">Messen, lernen, optimieren. Kontinuierlich.</p>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Mobile: simple stacked list (no arrow) -->
+      <!-- Mobile: simple stacked list -->
       <div class="md:hidden space-y-4">
         <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
           <div class="flex items-center gap-3 mb-2">
@@ -370,7 +256,7 @@
             <img src="https://img.icons8.com/ios/96/6BA5F2/cloud-development.png" alt="" class="w-8 h-8">
             <h3 class="font-semibold" data-i18n="approach_step3_m">Infrastruktur</h3>
           </div>
-          <p class="text-sm text-gray-500 leading-relaxed" data-i18n="approach_step3_desc_m">Souveräne Plattform aufsetzen — sicher und skalierbar.</p>
+          <p class="text-sm text-gray-500 leading-relaxed" data-i18n="approach_step3_desc_m">Souveräne Plattform aufsetzen. Sicher und skalierbar.</p>
         </div>
         <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
           <div class="flex items-center gap-3 mb-2">
@@ -384,7 +270,7 @@
             <img src="https://img.icons8.com/ios/96/6BA5F2/bar-chart.png" alt="" class="w-8 h-8">
             <h3 class="font-semibold" data-i18n="approach_step5_m">Feedback</h3>
           </div>
-          <p class="text-sm text-gray-500 leading-relaxed" data-i18n="approach_step5_desc_m">Messen, lernen, optimieren — kontinuierlich.</p>
+          <p class="text-sm text-gray-500 leading-relaxed" data-i18n="approach_step5_desc_m">Messen, lernen, optimieren. Kontinuierlich.</p>
         </div>
       </div>
     </div>
@@ -395,14 +281,14 @@
     <div class="max-w-5xl mx-auto px-6">
       <div class="flex flex-col md:flex-row items-center gap-6 md:gap-12">
         <div class="flex-shrink-0 w-72 md:w-[28rem]">
-          <img src="europe.svg" alt="Karte von Europa mit Markierung auf der Schweiz" class="w-full">
+          <img src="assets/europe.svg" alt="Karte von Europa mit Markierung auf der Schweiz" class="w-full">
         </div>
         <div class="text-center md:text-left">
           <p class="text-base md:text-lg leading-relaxed text-gray-700" data-i18n="sov_p1">
             Die meisten Schweizer Unternehmen betreiben ihre KI auf amerikanischer Infrastruktur.
           </p>
           <p class="mt-3 text-base md:text-lg leading-relaxed text-gray-700" data-i18n-html="sov_p2">
-            Das ist kein technisches Problem — es ist ein <span class="text-[#1A1A1A] font-semibold">strategisches</span>.
+            Die Frage ist <span class="text-[#1A1A1A] font-semibold">strategisch</span>, nicht technisch.
           </p>
           <p class="mt-5 text-xl md:text-2xl font-bold text-[#1A1A1A]" data-i18n="sov_p3">
             Wir ändern das.
@@ -416,12 +302,10 @@
   <footer id="kontakt" class="py-12 md:py-16 border-t border-gray-100">
     <div class="max-w-6xl mx-auto px-6">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-10 items-start">
-        <!-- Logo -->
         <div>
-          <img src="full_logo_black.png" alt="LLMify" class="h-7 mb-4">
+          <img src="assets/full_logo_black.png" alt="LLMify" class="h-7 mb-4">
           <p class="text-sm text-gray-400" data-i18n-html="footer_tagline">Souveräne KI-Infrastruktur<br>für Schweizer Unternehmen.</p>
         </div>
-        <!-- Contact -->
         <div class="text-sm text-gray-500 leading-relaxed">
           <p class="font-medium text-[#1A1A1A] mb-2" data-i18n="footer_contact">Kontakt</p>
           <p>LLMify AG</p>
@@ -431,7 +315,6 @@
             <a href="mailto:axel@llmify.ch" class="text-brand hover:text-brand-dark transition-colors">axel@llmify.ch</a>
           </p>
         </div>
-        <!-- Links -->
         <div class="text-sm text-gray-500">
           <p class="font-medium text-[#1A1A1A] mb-2">Links</p>
           <div class="flex flex-col gap-1.5">
@@ -519,547 +402,7 @@
     </div>
   </div>
 
-  <script>
-    // ========== TRANSLATIONS ==========
-    var translations = {
-      de: {
-        nav_start: 'Start',
-        nav_services: 'Leistungen',
-        nav_approach: 'Ansatz',
-        nav_contact: 'Kontakt',
-        hero_title: 'KI-Infrastruktur.<br>Souverän. In&nbsp;der&nbsp;Schweiz.',
-        hero_subtitle: 'Wir bauen KI-Lösungen, bei denen Ihre Daten Ihr Unternehmen nicht verlassen. Open-Source-Modelle, eigene Infrastruktur, volle Kontrolle.',
-        hero_cta: 'E-Mail schreiben',
-        stack_title: 'Der ganze KI-Stack',
-        stack_subtitle: 'Von der Strategie bis zur massgeschneiderten Applikation — alles aus einer Hand.',
-        stack_strategy: 'Strategie',
-        stack_strategy_desc: 'Klare Analyse, wo KI in Ihrem Unternehmen Wirkung zeigt. Gemeinsam identifizieren wir Use Cases, priorisieren nach Wirkung und Machbarkeit, und erarbeiten eine konkrete Roadmap.',
-        stack_infra: 'Infrastruktur',
-        stack_infra_desc: 'Open-Source-Modelle auf Schweizer Infrastruktur — on-premise oder in der souveränen Swiss Cloud. Ihre Daten bleiben bei Ihnen. Volle Kontrolle, volle Compliance.',
-        stack_apps: 'Applikationen',
-        stack_apps_desc: 'Massgeschneiderte Anwendungen für Ihre Geschäftsprozesse. Von intelligenter Dokumentensuche mit nachvollziehbaren Quellenverweisen bis zu vollautomatisierten Agent-Workflows.',
-        approach_title: 'Unser Ansatz',
-        approach_subtitle: 'Von der Strategie zur Implementierung. Schritt für Schritt.',
-        approach_step1: 'Standortbestimmung',
-        approach_step1_desc: 'Wo stehen Sie heute? Wo liegt das Potenzial?',
-        approach_step2: 'Workshop',
-        approach_step2_desc: 'Gemeinsam Use Cases identifizieren und priorisieren.',
-        approach_step3: 'Infrastruktur',
-        approach_step3_desc: 'Souveräne Plattform aufsetzen — sicher und skalierbar.',
-        approach_step4: 'Umsetzung',
-        approach_step4_desc: 'Anwendungen entwickeln und in Ihre Prozesse integrieren.',
-        approach_step5: 'Feedback',
-        approach_step5_desc: 'Messen, lernen, optimieren — kontinuierlich.',
-        approach_step1_m: 'Standortbestimmung',
-        approach_step1_desc_m: 'Wo stehen Sie heute? Wo liegt das Potenzial?',
-        approach_step2_m: 'Workshop',
-        approach_step2_desc_m: 'Gemeinsam Use Cases identifizieren und priorisieren.',
-        approach_step3_m: 'Infrastruktur',
-        approach_step3_desc_m: 'Souveräne Plattform aufsetzen — sicher und skalierbar.',
-        approach_step4_m: 'Umsetzung',
-        approach_step4_desc_m: 'Anwendungen entwickeln und in Ihre Prozesse integrieren.',
-        approach_step5_m: 'Feedback',
-        approach_step5_desc_m: 'Messen, lernen, optimieren — kontinuierlich.',
-        sov_p1: 'Die meisten Schweizer Unternehmen betreiben ihre KI auf amerikanischer Infrastruktur.',
-        sov_p2: 'Das ist kein technisches Problem — es ist ein <span class="text-[#1A1A1A] font-semibold">strategisches</span>.',
-        sov_p3: 'Wir ändern das.',
-        footer_tagline: 'Souveräne KI-Infrastruktur<br>für Schweizer Unternehmen.',
-        footer_contact: 'Kontakt',
-        footer_privacy: 'Datenschutz',
-        footer_impressum: 'Impressum',
-        footer_cookie_settings: 'Cookie-Einstellungen',
-        footer_copyright: '\u00A9 2026 LLMify AG. Alle Rechte vorbehalten.',
-        cookie_text: 'Diese Website verwendet Cookies.',
-        cookie_accept: 'Akzeptieren',
-        cookie_decline: 'Ablehnen',
-        privacy_title: 'Datenschutzerkl\u00E4rung',
-        privacy_updated: 'Letzte Aktualisierung: Januar 2025',
-        privacy_h_collection: 'Datenerhebung',
-        privacy_collection: 'Wenn Sie uns über das Kontaktformular oder per E-Mail kontaktieren, erheben wir die von Ihnen angegebenen Daten wie Name und E-Mail-Adresse. Diese Daten werden ausschliesslich zur Bearbeitung Ihrer Anfrage verwendet.',
-        privacy_h_usage: 'Verwendung',
-        privacy_usage: 'Wir verwenden Ihre Daten, um auf Ihre Anfragen zu antworten, unsere Dienstleistungen zu verbessern und gesetzlichen Anforderungen nachzukommen.',
-        privacy_h_security: 'Sicherheit',
-        privacy_security: 'Der Schutz Ihrer Daten ist uns wichtig. Wir halten uns an das Schweizer Datenschutzgesetz (DSG) und setzen angemessene technische und organisatorische Massnahmen ein, um Ihre Daten zu schützen.',
-        privacy_h_rights: 'Ihre Rechte',
-        privacy_rights_intro: 'Sie haben folgende Rechte in Bezug auf Ihre personenbezogenen Daten:',
-        privacy_right_access: 'Recht auf Auskunft über Ihre gespeicherten Daten',
-        privacy_right_correct: 'Recht auf Berichtigung unrichtiger Daten',
-        privacy_right_delete: 'Recht auf Löschung Ihrer Daten',
-        privacy_right_object: 'Recht auf Widerspruch gegen die Verarbeitung',
-        privacy_right_port: 'Recht auf Datenübertragbarkeit',
-        privacy_h_contact: 'Verantwortliche Stelle',
-        privacy_h_jurisdiction: 'Anwendbares Recht',
-        privacy_jurisdiction: 'Es gilt Schweizer Recht. Gerichtsstand ist Zug.',
-        impressum_title: 'Impressum',
-        impressum_h_company: 'Unternehmen',
-        impressum_country: 'Schweiz',
-        impressum_h_register: 'Handelsregister',
-        impressum_uid: 'UID:',
-        impressum_type: 'Rechtsform:',
-        impressum_type_val: 'Aktiengesellschaft',
-        impressum_register: 'Handelsregister:',
-        impressum_register_val: 'Zug',
-        impressum_h_contact: 'Kontakt',
-        impressum_h_jurisdiction: 'Anwendbares Recht',
-        impressum_jurisdiction: 'Es gilt Schweizer Recht. Gerichtsstand ist Zug.'
-      },
-      fr: {
-        nav_start: 'Accueil',
-        nav_services: 'Services',
-        nav_approach: 'Approche',
-        nav_contact: 'Contact',
-        hero_title: 'Infrastructure IA.<br>Souveraine. En&nbsp;Suisse.',
-        hero_subtitle: 'Nous construisons des solutions IA o\u00F9 vos donn\u00E9es ne quittent pas votre entreprise. Mod\u00E8les open source, infrastructure propre, contr\u00F4le total.',
-        hero_cta: '\u00C9crire un e-mail',
-        stack_title: 'La pile IA compl\u00E8te',
-        stack_subtitle: 'De la strat\u00E9gie \u00E0 l\u2019application sur mesure — tout d\u2019un seul prestataire.',
-        stack_strategy: 'Strat\u00E9gie',
-        stack_strategy_desc: 'Analyse claire de l\u2019impact de l\u2019IA dans votre entreprise. Ensemble, nous identifions les cas d\u2019utilisation, les priorisons par impact et faisabilit\u00E9, et \u00E9laborons une feuille de route concr\u00E8te.',
-        stack_infra: 'Infrastructure',
-        stack_infra_desc: 'Mod\u00E8les open source sur infrastructure suisse — on-premise ou dans le cloud souverain suisse. Vos donn\u00E9es restent chez vous. Contr\u00F4le total, conformit\u00E9 totale.',
-        stack_apps: 'Applications',
-        stack_apps_desc: 'Applications sur mesure pour vos processus m\u00E9tier. De la recherche documentaire intelligente avec r\u00E9f\u00E9rences tra\u00E7ables aux workflows automatis\u00E9s par agents.',
-        approach_title: 'Notre approche',
-        approach_subtitle: 'De la strat\u00E9gie \u00E0 la mise en \u0153uvre. \u00C9tape par \u00E9tape.',
-        approach_step1: '\u00C9tat des lieux',
-        approach_step1_desc: 'O\u00F9 en \u00EAtes-vous aujourd\u2019hui ? O\u00F9 se trouve le potentiel ?',
-        approach_step2: 'Atelier',
-        approach_step2_desc: 'Identifier et prioriser les cas d\u2019utilisation ensemble.',
-        approach_step3: 'Infrastructure',
-        approach_step3_desc: 'Mettre en place une plateforme souveraine — s\u00E9curis\u00E9e et \u00E9volutive.',
-        approach_step4: 'R\u00E9alisation',
-        approach_step4_desc: 'D\u00E9velopper des applications et les int\u00E9grer dans vos processus.',
-        approach_step5: 'Retour d\u2019exp\u00E9rience',
-        approach_step5_desc: 'Mesurer, apprendre, optimiser — en continu.',
-        approach_step1_m: '\u00C9tat des lieux',
-        approach_step1_desc_m: 'O\u00F9 en \u00EAtes-vous aujourd\u2019hui ? O\u00F9 se trouve le potentiel ?',
-        approach_step2_m: 'Atelier',
-        approach_step2_desc_m: 'Identifier et prioriser les cas d\u2019utilisation ensemble.',
-        approach_step3_m: 'Infrastructure',
-        approach_step3_desc_m: 'Mettre en place une plateforme souveraine — s\u00E9curis\u00E9e et \u00E9volutive.',
-        approach_step4_m: 'R\u00E9alisation',
-        approach_step4_desc_m: 'D\u00E9velopper des applications et les int\u00E9grer dans vos processus.',
-        approach_step5_m: 'Retour d\u2019exp\u00E9rience',
-        approach_step5_desc_m: 'Mesurer, apprendre, optimiser — en continu.',
-        sov_p1: 'La plupart des entreprises suisses exploitent leur IA sur une infrastructure am\u00E9ricaine.',
-        sov_p2: 'Ce n\u2019est pas un probl\u00E8me technique — c\u2019est un probl\u00E8me <span class="text-[#1A1A1A] font-semibold">strat\u00E9gique</span>.',
-        sov_p3: 'Nous changeons cela.',
-        footer_tagline: 'Infrastructure IA souveraine<br>pour les entreprises suisses.',
-        footer_contact: 'Contact',
-        footer_privacy: 'Protection des donn\u00E9es',
-        footer_impressum: 'Mentions l\u00E9gales',
-        footer_cookie_settings: 'Param\u00E8tres des cookies',
-        footer_copyright: '\u00A9 2026 LLMify AG. Tous droits r\u00E9serv\u00E9s.',
-        cookie_text: 'Ce site utilise des cookies.',
-        cookie_accept: 'Accepter',
-        cookie_decline: 'Refuser',
-        privacy_title: 'Politique de confidentialit\u00E9',
-        privacy_updated: 'Derni\u00E8re mise \u00E0 jour : janvier 2025',
-        privacy_h_collection: 'Collecte de donn\u00E9es',
-        privacy_collection: 'Lorsque vous nous contactez via le formulaire de contact ou par e-mail, nous collectons les donn\u00E9es que vous fournissez, telles que votre nom et votre adresse e-mail. Ces donn\u00E9es sont utilis\u00E9es exclusivement pour traiter votre demande.',
-        privacy_h_usage: 'Utilisation',
-        privacy_usage: 'Nous utilisons vos donn\u00E9es pour r\u00E9pondre \u00E0 vos demandes, am\u00E9liorer nos services et satisfaire aux exigences l\u00E9gales.',
-        privacy_h_security: 'S\u00E9curit\u00E9',
-        privacy_security: 'La protection de vos donn\u00E9es est importante pour nous. Nous respectons la loi suisse sur la protection des donn\u00E9es (LPD) et mettons en \u0153uvre des mesures techniques et organisationnelles appropri\u00E9es pour prot\u00E9ger vos donn\u00E9es.',
-        privacy_h_rights: 'Vos droits',
-        privacy_rights_intro: 'Vous disposez des droits suivants concernant vos donn\u00E9es personnelles :',
-        privacy_right_access: 'Droit d\u2019acc\u00E8s \u00E0 vos donn\u00E9es stock\u00E9es',
-        privacy_right_correct: 'Droit de rectification des donn\u00E9es inexactes',
-        privacy_right_delete: 'Droit \u00E0 l\u2019effacement de vos donn\u00E9es',
-        privacy_right_object: 'Droit d\u2019opposition au traitement',
-        privacy_right_port: 'Droit \u00E0 la portabilit\u00E9 des donn\u00E9es',
-        privacy_h_contact: 'Responsable du traitement',
-        privacy_h_jurisdiction: 'Droit applicable',
-        privacy_jurisdiction: 'Le droit suisse est applicable. Le for juridique est Zoug.',
-        impressum_title: 'Mentions l\u00E9gales',
-        impressum_h_company: 'Entreprise',
-        impressum_country: 'Suisse',
-        impressum_h_register: 'Registre du commerce',
-        impressum_uid: 'IDE :',
-        impressum_type: 'Forme juridique :',
-        impressum_type_val: 'Soci\u00E9t\u00E9 anonyme',
-        impressum_register: 'Registre du commerce :',
-        impressum_register_val: 'Zoug',
-        impressum_h_contact: 'Contact',
-        impressum_h_jurisdiction: 'Droit applicable',
-        impressum_jurisdiction: 'Le droit suisse est applicable. Le for juridique est Zoug.'
-      },
-      it: {
-        nav_start: 'Home',
-        nav_services: 'Servizi',
-        nav_approach: 'Approccio',
-        nav_contact: 'Contatto',
-        hero_title: 'Infrastruttura IA.<br>Sovrana. In&nbsp;Svizzera.',
-        hero_subtitle: 'Costruiamo soluzioni IA in cui i vostri dati non lasciano la vostra azienda. Modelli open source, infrastruttura propria, controllo totale.',
-        hero_cta: 'Scrivi un\u2019e-mail',
-        stack_title: 'L\u2019intero stack IA',
-        stack_subtitle: 'Dalla strategia all\u2019applicazione su misura — tutto da un unico fornitore.',
-        stack_strategy: 'Strategia',
-        stack_strategy_desc: 'Analisi chiara dell\u2019impatto dell\u2019IA nella vostra azienda. Insieme identifichiamo i casi d\u2019uso, li priorizziamo per impatto e fattibilit\u00E0, e sviluppiamo una roadmap concreta.',
-        stack_infra: 'Infrastruttura',
-        stack_infra_desc: 'Modelli open source su infrastruttura svizzera — on-premise o nel cloud sovrano svizzero. I vostri dati restano da voi. Controllo totale, conformit\u00E0 totale.',
-        stack_apps: 'Applicazioni',
-        stack_apps_desc: 'Applicazioni su misura per i vostri processi aziendali. Dalla ricerca documentale intelligente con riferimenti tracciabili ai workflow automatizzati con agenti.',
-        approach_title: 'Il nostro approccio',
-        approach_subtitle: 'Dalla strategia all\u2019implementazione. Passo dopo passo.',
-        approach_step1: 'Analisi iniziale',
-        approach_step1_desc: 'Dove vi trovate oggi? Dove si trova il potenziale?',
-        approach_step2: 'Workshop',
-        approach_step2_desc: 'Identificare e priorizzare insieme i casi d\u2019uso.',
-        approach_step3: 'Infrastruttura',
-        approach_step3_desc: 'Creare una piattaforma sovrana — sicura e scalabile.',
-        approach_step4: 'Realizzazione',
-        approach_step4_desc: 'Sviluppare applicazioni e integrarle nei vostri processi.',
-        approach_step5: 'Feedback',
-        approach_step5_desc: 'Misurare, imparare, ottimizzare — continuamente.',
-        approach_step1_m: 'Analisi iniziale',
-        approach_step1_desc_m: 'Dove vi trovate oggi? Dove si trova il potenziale?',
-        approach_step2_m: 'Workshop',
-        approach_step2_desc_m: 'Identificare e priorizzare insieme i casi d\u2019uso.',
-        approach_step3_m: 'Infrastruttura',
-        approach_step3_desc_m: 'Creare una piattaforma sovrana — sicura e scalabile.',
-        approach_step4_m: 'Realizzazione',
-        approach_step4_desc_m: 'Sviluppare applicazioni e integrarle nei vostri processi.',
-        approach_step5_m: 'Feedback',
-        approach_step5_desc_m: 'Misurare, imparare, ottimizzare — continuamente.',
-        sov_p1: 'La maggior parte delle aziende svizzere gestisce la propria IA su infrastruttura americana.',
-        sov_p2: 'Non \u00E8 un problema tecnico — \u00E8 un problema <span class="text-[#1A1A1A] font-semibold">strategico</span>.',
-        sov_p3: 'Noi cambiamo questo.',
-        footer_tagline: 'Infrastruttura IA sovrana<br>per le aziende svizzere.',
-        footer_contact: 'Contatto',
-        footer_privacy: 'Privacy',
-        footer_impressum: 'Impressum',
-        footer_cookie_settings: 'Impostazioni cookie',
-        footer_copyright: '\u00A9 2026 LLMify AG. Tutti i diritti riservati.',
-        cookie_text: 'Questo sito utilizza i cookie.',
-        cookie_accept: 'Accetta',
-        cookie_decline: 'Rifiuta',
-        privacy_title: 'Informativa sulla privacy',
-        privacy_updated: 'Ultimo aggiornamento: gennaio 2025',
-        privacy_h_collection: 'Raccolta dati',
-        privacy_collection: 'Quando ci contattate tramite il modulo di contatto o via e-mail, raccogliamo i dati da voi forniti come nome e indirizzo e-mail. Questi dati vengono utilizzati esclusivamente per gestire la vostra richiesta.',
-        privacy_h_usage: 'Utilizzo',
-        privacy_usage: 'Utilizziamo i vostri dati per rispondere alle vostre richieste, migliorare i nostri servizi e soddisfare i requisiti legali.',
-        privacy_h_security: 'Sicurezza',
-        privacy_security: 'La protezione dei vostri dati \u00E8 importante per noi. Rispettiamo la legge svizzera sulla protezione dei dati (LPD) e adottiamo misure tecniche e organizzative adeguate per proteggere i vostri dati.',
-        privacy_h_rights: 'I vostri diritti',
-        privacy_rights_intro: 'Avete i seguenti diritti relativi ai vostri dati personali:',
-        privacy_right_access: 'Diritto di accesso ai dati memorizzati',
-        privacy_right_correct: 'Diritto di rettifica dei dati inesatti',
-        privacy_right_delete: 'Diritto alla cancellazione dei dati',
-        privacy_right_object: 'Diritto di opposizione al trattamento',
-        privacy_right_port: 'Diritto alla portabilit\u00E0 dei dati',
-        privacy_h_contact: 'Responsabile del trattamento',
-        privacy_h_jurisdiction: 'Diritto applicabile',
-        privacy_jurisdiction: '\u00C8 applicabile il diritto svizzero. Il foro competente \u00E8 Zugo.',
-        impressum_title: 'Impressum',
-        impressum_h_company: 'Azienda',
-        impressum_country: 'Svizzera',
-        impressum_h_register: 'Registro di commercio',
-        impressum_uid: 'IDI:',
-        impressum_type: 'Forma giuridica:',
-        impressum_type_val: 'Societ\u00E0 anonima',
-        impressum_register: 'Registro di commercio:',
-        impressum_register_val: 'Zugo',
-        impressum_h_contact: 'Contatto',
-        impressum_h_jurisdiction: 'Diritto applicabile',
-        impressum_jurisdiction: '\u00C8 applicabile il diritto svizzero. Il foro competente \u00E8 Zugo.'
-      },
-      en: {
-        nav_start: 'Home',
-        nav_services: 'Services',
-        nav_approach: 'Approach',
-        nav_contact: 'Contact',
-        hero_title: 'AI Infrastructure.<br>Sovereign. In&nbsp;Switzerland.',
-        hero_subtitle: 'We build AI solutions where your data never leaves your company. Open-source models, own infrastructure, full control.',
-        hero_cta: 'Send an email',
-        stack_title: 'The full AI stack',
-        stack_subtitle: 'From strategy to custom application — everything from a single provider.',
-        stack_strategy: 'Strategy',
-        stack_strategy_desc: 'Clear analysis of where AI creates impact in your company. Together we identify use cases, prioritise by impact and feasibility, and develop a concrete roadmap.',
-        stack_infra: 'Infrastructure',
-        stack_infra_desc: 'Open-source models on Swiss infrastructure — on-premise or in the sovereign Swiss cloud. Your data stays with you. Full control, full compliance.',
-        stack_apps: 'Applications',
-        stack_apps_desc: 'Custom applications for your business processes. From intelligent document search with traceable source references to fully automated agent workflows.',
-        approach_title: 'Our approach',
-        approach_subtitle: 'From strategy to implementation. Step by step.',
-        approach_step1: 'Assessment',
-        approach_step1_desc: 'Where do you stand today? Where is the potential?',
-        approach_step2: 'Workshop',
-        approach_step2_desc: 'Identify and prioritise use cases together.',
-        approach_step3: 'Infrastructure',
-        approach_step3_desc: 'Set up a sovereign platform — secure and scalable.',
-        approach_step4: 'Implementation',
-        approach_step4_desc: 'Develop applications and integrate them into your processes.',
-        approach_step5: 'Feedback',
-        approach_step5_desc: 'Measure, learn, optimise — continuously.',
-        approach_step1_m: 'Assessment',
-        approach_step1_desc_m: 'Where do you stand today? Where is the potential?',
-        approach_step2_m: 'Workshop',
-        approach_step2_desc_m: 'Identify and prioritise use cases together.',
-        approach_step3_m: 'Infrastructure',
-        approach_step3_desc_m: 'Set up a sovereign platform — secure and scalable.',
-        approach_step4_m: 'Implementation',
-        approach_step4_desc_m: 'Develop applications and integrate them into your processes.',
-        approach_step5_m: 'Feedback',
-        approach_step5_desc_m: 'Measure, learn, optimise — continuously.',
-        sov_p1: 'Most Swiss companies run their AI on American infrastructure.',
-        sov_p2: 'This is not a technical problem — it is a <span class="text-[#1A1A1A] font-semibold">strategic</span> one.',
-        sov_p3: 'We are changing that.',
-        footer_tagline: 'Sovereign AI infrastructure<br>for Swiss companies.',
-        footer_contact: 'Contact',
-        footer_privacy: 'Privacy Policy',
-        footer_impressum: 'Legal Notice',
-        footer_cookie_settings: 'Cookie Settings',
-        footer_copyright: '\u00A9 2026 LLMify AG. All rights reserved.',
-        cookie_text: 'This website uses cookies.',
-        cookie_accept: 'Accept',
-        cookie_decline: 'Decline',
-        privacy_title: 'Privacy Policy',
-        privacy_updated: 'Last updated: January 2025',
-        privacy_h_collection: 'Data Collection',
-        privacy_collection: 'When you contact us via the contact form or by email, we collect the data you provide such as your name and email address. This data is used exclusively to process your inquiry.',
-        privacy_h_usage: 'Usage',
-        privacy_usage: 'We use your data to respond to your inquiries, improve our services, and comply with legal requirements.',
-        privacy_h_security: 'Security',
-        privacy_security: 'The protection of your data is important to us. We comply with the Swiss Data Protection Act (DSG) and implement appropriate technical and organisational measures to protect your data.',
-        privacy_h_rights: 'Your Rights',
-        privacy_rights_intro: 'You have the following rights regarding your personal data:',
-        privacy_right_access: 'Right to access your stored data',
-        privacy_right_correct: 'Right to rectification of inaccurate data',
-        privacy_right_delete: 'Right to erasure of your data',
-        privacy_right_object: 'Right to object to processing',
-        privacy_right_port: 'Right to data portability',
-        privacy_h_contact: 'Data Controller',
-        privacy_h_jurisdiction: 'Applicable Law',
-        privacy_jurisdiction: 'Swiss law applies. The place of jurisdiction is Zug.',
-        impressum_title: 'Legal Notice',
-        impressum_h_company: 'Company',
-        impressum_country: 'Switzerland',
-        impressum_h_register: 'Commercial Register',
-        impressum_uid: 'UID:',
-        impressum_type: 'Legal form:',
-        impressum_type_val: 'Stock corporation (AG)',
-        impressum_register: 'Commercial register:',
-        impressum_register_val: 'Zug',
-        impressum_h_contact: 'Contact',
-        impressum_h_jurisdiction: 'Applicable Law',
-        impressum_jurisdiction: 'Swiss law applies. The place of jurisdiction is Zug.'
-      }
-    };
-
-    // ========== i18n ENGINE ==========
-    var currentLang = 'de';
-
-    function setLanguage(lang) {
-      if (!translations[lang]) return;
-      currentLang = lang;
-      localStorage.setItem('llmify-lang', lang);
-
-      // Update html lang attribute
-      var langMap = { de: 'de-CH', fr: 'fr-CH', it: 'it-CH', en: 'en' };
-      document.documentElement.lang = langMap[lang] || lang;
-
-      // Update lang toggle display
-      document.getElementById('lang-current').textContent = lang.toUpperCase();
-
-      // Update active state in dropdown
-      document.querySelectorAll('.lang-option').forEach(function(opt) {
-        opt.classList.toggle('active', opt.getAttribute('data-lang') === lang);
-      });
-
-      var t = translations[lang];
-
-      // Update text elements
-      document.querySelectorAll('[data-i18n]').forEach(function(el) {
-        var key = el.getAttribute('data-i18n');
-        if (t[key] !== undefined) {
-          el.textContent = t[key];
-        }
-      });
-
-      // Update HTML elements (those with inner HTML like <br> or <span>)
-      document.querySelectorAll('[data-i18n-html]').forEach(function(el) {
-        var key = el.getAttribute('data-i18n-html');
-        if (t[key] !== undefined) {
-          el.innerHTML = t[key];
-        }
-      });
-
-      // Close dropdown
-      document.getElementById('lang-dropdown').classList.remove('open');
-    }
-
-    // ========== COOKIE BANNER ==========
-    function showCookieBanner() {
-      document.getElementById('cookie-banner').style.display = 'block';
-    }
-
-    function hideCookieBanner() {
-      document.getElementById('cookie-banner').style.display = 'none';
-    }
-
-    function acceptCookies() {
-      localStorage.setItem('llmify-cookies', 'accepted');
-      hideCookieBanner();
-    }
-
-    function declineCookies() {
-      localStorage.setItem('llmify-cookies', 'declined');
-      hideCookieBanner();
-    }
-
-    // ========== MODALS ==========
-    function openModal(id) {
-      document.getElementById(id).classList.add('open');
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closeModal(id) {
-      document.getElementById(id).classList.remove('open');
-      document.body.style.overflow = '';
-    }
-
-    // Close modals on Escape key
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') {
-        document.querySelectorAll('.modal-overlay.open').forEach(function(m) {
-          m.classList.remove('open');
-        });
-        document.body.style.overflow = '';
-      }
-    });
-
-    // ========== LANGUAGE DROPDOWN ==========
-    document.getElementById('lang-toggle').addEventListener('click', function(e) {
-      e.stopPropagation();
-      document.getElementById('lang-dropdown').classList.toggle('open');
-    });
-
-    document.querySelectorAll('.lang-option').forEach(function(opt) {
-      opt.addEventListener('click', function() {
-        setLanguage(this.getAttribute('data-lang'));
-      });
-    });
-
-    // Close dropdown when clicking elsewhere
-    document.addEventListener('click', function() {
-      document.getElementById('lang-dropdown').classList.remove('open');
-    });
-
-    // ========== INIT ==========
-    (function() {
-      // Restore language
-      var savedLang = localStorage.getItem('llmify-lang');
-      if (savedLang && translations[savedLang]) {
-        setLanguage(savedLang);
-      } else {
-        // Set default active state
-        setLanguage('de');
-      }
-
-      // Show cookie banner if no choice made
-      var cookieChoice = localStorage.getItem('llmify-cookies');
-      if (!cookieChoice) {
-        showCookieBanner();
-      }
-    })();
-
-    // Stack scroll animation
-    (function() {
-      const section = document.getElementById('leistungen');
-      const layers = document.querySelectorAll('.stack-layer');
-
-      function updateStack() {
-        const rect = section.getBoundingClientRect();
-        const scrollRange = section.offsetHeight - window.innerHeight;
-        const progress = Math.max(0, Math.min(1, -rect.top / scrollRange));
-
-        const sepProgress = Math.min(1, progress / 0.4);
-        const detailProgress = Math.max(0, Math.min(1, (progress - 0.3) / 0.5));
-
-        const startGap = 4;
-        const maxGap = 16;
-        const gap = startGap + sepProgress * (maxGap - startGap);
-
-        layers.forEach(layer => {
-          const bar = layer.querySelector('.stack-bar');
-          const detail = layer.querySelector('.stack-detail');
-
-          layer.style.marginBottom = gap + 'px';
-
-          const r = 8 + sepProgress * 4;
-          layer.style.borderRadius = r + 'px';
-
-          // Shadow
-          const s = sepProgress * 6;
-          layer.style.boxShadow = sepProgress > 0.05
-            ? `0 ${s/2}px ${s * 1.5}px rgba(0,0,0,${0.04 + sepProgress * 0.04})`
-            : 'none';
-
-          // Keep bar centered
-
-          // Detail text
-          detail.style.maxHeight = (detailProgress * 200) + 'px';
-          detail.style.opacity = detailProgress;
-        });
-      }
-
-      window.addEventListener('scroll', updateStack, { passive: true });
-      window.addEventListener('resize', updateStack);
-      updateStack();
-    })();
-
-    function drawArrow() {
-      const container = document.getElementById('approach-container');
-      if (!container) return;
-      const cards = container.querySelectorAll('.rounded-xl');
-      if (cards.length < 5) return;
-      const r = container.getBoundingClientRect();
-      function mid(el) {
-        const b = el.getBoundingClientRect();
-        return { x: b.left - r.left + b.width / 2, y: b.top - r.top + b.height / 2, right: b.right - r.left, left: b.left - r.left };
-      }
-      const c = Array.from(cards).map(mid);
-      // Path: enter card1 left → exit card1 right → enter card2 left → exit card2 right → enter card3 left → exit card3 right → curve down → enter card4 left → exit card4 right → enter card5 left → exit card5 right
-      const g = 50;
-      const midY = (c[2].y + c[3].y) / 2;
-      const halfDy = (c[3].y - c[2].y) / 4;
-      const d = [
-        // Enter before card1, straight through top row
-        `M ${c[0].left - g},${c[0].y}`,
-        `L ${c[2].right + 8},${c[2].y}`,
-        // Right semicircle: row1 → mid-gap
-        `A ${halfDy},${halfDy} 0 0 1 ${c[2].right + 8},${midY}`,
-        // Straight across the gap (right to left)
-        `L ${c[3].left - 8},${midY}`,
-        // Left semicircle: mid-gap → row2
-        `A ${halfDy},${halfDy} 0 0 0 ${c[3].left - 8},${c[3].y}`,
-        // Through card4 → card5, exit past card5
-        `L ${c[4].right + g},${c[4].y}`,
-      ].join(' ');
-      document.getElementById('arrow-path').setAttribute('d', d);
-    }
-    window.addEventListener('load', drawArrow);
-    window.addEventListener('resize', drawArrow);
-
-    // Active nav highlight on scroll
-    const navLinks = document.querySelectorAll('.nav-link');
-    const navSections = document.querySelectorAll('#start, #leistungen, #ansatz, #kontakt');
-    window.addEventListener('scroll', () => {
-      let current = '';
-      const atBottom = (window.innerHeight + window.scrollY) >= document.body.offsetHeight - 50;
-      if (atBottom) {
-        current = 'kontakt';
-      } else {
-        navSections.forEach(s => {
-          if (window.scrollY >= s.offsetTop - 200) current = s.id;
-        });
-      }
-      navLinks.forEach(l => {
-        l.classList.toggle('active', l.getAttribute('href') === '#' + current);
-      });
-    });
-  </script>
+  <script src="js/translations.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
