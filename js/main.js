@@ -107,18 +107,27 @@ document.addEventListener('click', function() {
 // ========== STACK SCROLL ANIMATION ==========
 (function() {
   var section = document.getElementById('leistungen');
+  var container = document.getElementById('stack-container');
   var rows = document.querySelectorAll('.stack-row');
+  var minWidth = 448;  // max-w-md (28rem)
+  var maxWidth = 576;  // max-w-xl (36rem)
 
   function updateStack() {
     var rect = section.getBoundingClientRect();
     var scrollRange = section.offsetHeight - window.innerHeight;
     var progress = Math.max(0, Math.min(1, -rect.top / scrollRange));
 
-    // Each row expands sequentially
+    // Phase 1: horizontal scaling (0–30% of scroll)
+    var widthProgress = Math.max(0, Math.min(1, progress / 0.3));
+    var currentWidth = minWidth + (maxWidth - minWidth) * widthProgress;
+    container.style.maxWidth = currentWidth + 'px';
+
+    // Phase 2: vertical row expansion (30–100% of scroll)
+    var vertProgress = Math.max(0, Math.min(1, (progress - 0.3) / 0.7));
     rows.forEach(function(row, i) {
-      var rowStart = i * 0.25 + 0.1;
-      var rowEnd = rowStart + 0.2;
-      var rowProgress = Math.max(0, Math.min(1, (progress - rowStart) / (rowEnd - rowStart)));
+      var rowStart = i * 0.3;
+      var rowEnd = rowStart + 0.3;
+      var rowProgress = Math.max(0, Math.min(1, (vertProgress - rowStart) / (rowEnd - rowStart)));
 
       var detail = row.querySelector('.stack-detail');
 
@@ -179,15 +188,3 @@ window.addEventListener('scroll', function() {
   });
 });
 
-// ========== STACK WIDTH TOGGLE ==========
-var stackSizes = ['max-w-md', 'max-w-xl', 'max-w-2xl'];
-var stackLabels = ['kompakt', 'mittel', 'breit'];
-var stackIndex = 0;
-function toggleStackWidth() {
-  var container = document.getElementById('stack-container');
-  var btn = document.getElementById('stack-toggle');
-  container.classList.remove(stackSizes[stackIndex]);
-  stackIndex = (stackIndex + 1) % stackSizes.length;
-  container.classList.add(stackSizes[stackIndex]);
-  btn.textContent = 'Aktuell: ' + stackLabels[stackIndex] + ' \u2014 Klick f\u00fcr ' + stackLabels[(stackIndex + 1) % stackSizes.length];
-}
