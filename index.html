@@ -191,12 +191,16 @@
   <section id="leistungen" class="relative" style="height: 250vh;">
     <div class="sticky top-0 h-screen flex flex-col items-center justify-center">
       <h2 class="text-2xl md:text-3xl font-bold text-center mb-3" data-i18n="stack_title">Der ganze KI-Stack</h2>
-      <p class="text-gray-500 text-center mb-12 max-w-md mx-auto" data-i18n="stack_subtitle">Von der Strategie bis zur massgeschneiderten Applikation. Alles aus einer Hand.</p>
+      <p class="text-gray-500 text-center mb-8 max-w-md mx-auto" data-i18n="stack_subtitle">Von der Strategie bis zur massgeschneiderten Applikation. Alles aus einer Hand.</p>
 
-      <div class="w-full max-w-2xl mx-auto px-6 flex flex-col gap-3" id="stack-container">
+      <button onclick="toggleStackWidth()" id="stack-toggle" class="mb-4 px-4 py-1.5 text-xs font-medium rounded-full border border-gray-300 text-gray-500 hover:border-brand hover:text-brand transition-colors">
+        Aktuell: kompakt — Klick für breit
+      </button>
+
+      <div class="w-full max-w-md mx-auto px-6 flex flex-col gap-4 transition-all duration-500" id="stack-container">
 
         <!-- Row 1: bar left, square RIGHT -->
-        <div class="stack-row flex items-start gap-2">
+        <div class="stack-row flex items-start gap-1.5">
           <div class="stack-bubble flex-1 bg-brand overflow-hidden">
             <div class="px-5 h-12 md:h-14 flex items-center">
               <span class="font-semibold text-white" data-i18n="stack_strategy">Strategie</span>
@@ -211,7 +215,7 @@
         </div>
 
         <!-- Row 2: square LEFT, bar right -->
-        <div class="stack-row flex items-start gap-2">
+        <div class="stack-row flex items-start gap-1.5">
           <div class="w-12 h-12 md:w-14 md:h-14 rounded-full bg-brand flex items-center justify-center flex-shrink-0">
             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 14.25h13.5m-13.5 0a3 3 0 01-3-3m3 3a3 3 0 100 6h13.5a3 3 0 100-6m-16.5-3a3 3 0 013-3h13.5a3 3 0 013 3m-19.5 0a4.5 4.5 0 01.9-2.7L5.737 5.1a3.375 3.375 0 012.7-1.35h7.126c1.062 0 2.062.5 2.7 1.35l2.587 3.45a4.5 4.5 0 01.9 2.7"/></svg>
           </div>
@@ -226,7 +230,7 @@
         </div>
 
         <!-- Row 3: bar left, square RIGHT -->
-        <div class="stack-row flex items-start gap-2">
+        <div class="stack-row flex items-start gap-1.5">
           <div class="stack-bubble flex-1 bg-brand overflow-hidden">
             <div class="px-5 h-12 md:h-14 flex items-center">
               <span class="font-semibold text-white" data-i18n="stack_apps">Applikationen</span>

@@ -178,3 +178,16 @@ window.addEventListener('scroll', function() {
     l.classList.toggle('active', l.getAttribute('href') === '#' + current);
   });
 });
+
+// ========== STACK WIDTH TOGGLE ==========
+var stackSizes = ['max-w-md', 'max-w-xl', 'max-w-2xl'];
+var stackLabels = ['kompakt', 'mittel', 'breit'];
+var stackIndex = 0;
+function toggleStackWidth() {
+  var container = document.getElementById('stack-container');
+  var btn = document.getElementById('stack-toggle');
+  container.classList.remove(stackSizes[stackIndex]);
+  stackIndex = (stackIndex + 1) % stackSizes.length;
+  container.classList.add(stackSizes[stackIndex]);
+  btn.textContent = 'Aktuell: ' + stackLabels[stackIndex] + ' \u2014 Klick f\u00fcr ' + stackLabels[(stackIndex + 1) % stackSizes.length];
+}
