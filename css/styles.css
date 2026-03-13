@@ -74,38 +74,16 @@ html { scroll-behavior: smooth; }
 .lang-option.active { color: #6BA5F2; font-weight: 600; }
 
 /* Stack section */
-.stack-layer {
-  background: var(--layer-color);
-  overflow: hidden;
-}
-.stack-bar {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 0.75rem;
-  padding: 0.9rem 1.5rem;
-}
-.stack-icon {
-  color: white;
-  opacity: 0.9;
-  flex-shrink: 0;
-}
-.stack-label {
-  font-weight: 600;
-  font-size: 1rem;
-  color: white;
-  letter-spacing: 0.01em;
+.stack-bubble {
+  transition: all 0.4s ease;
 }
 .stack-detail {
   max-height: 0;
   opacity: 0;
   overflow: hidden;
-  padding: 0 1.25rem;
-  text-align: left;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
 }
-.stack-detail p {
-  color: rgba(255,255,255,0.85);
-  font-size: 0.875rem;
-  line-height: 1.7;
-  padding-bottom: 1rem;
+.stack-row.expanded .stack-detail {
+  max-height: 200px;
+  opacity: 1;
 }

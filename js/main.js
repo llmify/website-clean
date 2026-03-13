@@ -107,35 +107,24 @@ document.addEventListener('click', function() {
 // ========== STACK SCROLL ANIMATION ==========
 (function() {
   var section = document.getElementById('leistungen');
-  var layers = document.querySelectorAll('.stack-layer');
+  var rows = document.querySelectorAll('.stack-row');
 
   function updateStack() {
     var rect = section.getBoundingClientRect();
     var scrollRange = section.offsetHeight - window.innerHeight;
     var progress = Math.max(0, Math.min(1, -rect.top / scrollRange));
 
-    var sepProgress = Math.min(1, progress / 0.4);
-    var detailProgress = Math.max(0, Math.min(1, (progress - 0.3) / 0.5));
+    // Each row expands sequentially
+    rows.forEach(function(row, i) {
+      var rowStart = i * 0.25 + 0.1;
+      var rowEnd = rowStart + 0.2;
+      var rowProgress = Math.max(0, Math.min(1, (progress - rowStart) / (rowEnd - rowStart)));
 
-    var startGap = 4;
-    var maxGap = 16;
-    var gap = startGap + sepProgress * (maxGap - startGap);
-
-    layers.forEach(function(layer) {
-      var detail = layer.querySelector('.stack-detail');
-
-      layer.style.marginBottom = gap + 'px';
-
-      var r = 8 + sepProgress * 4;
-      layer.style.borderRadius = r + 'px';
-
-      var s = sepProgress * 6;
-      layer.style.boxShadow = sepProgress > 0.05
-        ? '0 ' + (s/2) + 'px ' + (s * 1.5) + 'px rgba(0,0,0,' + (0.04 + sepProgress * 0.04) + ')'
-        : 'none';
-
-      detail.style.maxHeight = (detailProgress * 200) + 'px';
-      detail.style.opacity = Math.min(1, detailProgress * 2.5);
+      if (rowProgress > 0.3) {
+        row.classList.add('expanded');
+      } else {
+        row.classList.remove('expanded');
+      }
     });
   }
 
