@@ -120,11 +120,11 @@ document.addEventListener('click', function() {
       var rowEnd = rowStart + 0.2;
       var rowProgress = Math.max(0, Math.min(1, (progress - rowStart) / (rowEnd - rowStart)));
 
-      if (rowProgress > 0.3) {
-        row.classList.add('expanded');
-      } else {
-        row.classList.remove('expanded');
-      }
+      var detail = row.querySelector('.stack-detail');
+
+      // Smooth detail expansion
+      detail.style.maxHeight = (rowProgress * 200) + 'px';
+      detail.style.opacity = Math.min(1, rowProgress * 2);
     });
   }
 

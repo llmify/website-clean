@@ -75,15 +75,11 @@ html { scroll-behavior: smooth; }
 
 /* Stack section */
 .stack-bubble {
-  transition: all 0.4s ease;
+  border-radius: 1.75rem;
 }
 .stack-detail {
   max-height: 0;
   opacity: 0;
   overflow: hidden;
   transition: max-height 0.4s ease, opacity 0.3s ease;
-}
-.stack-row.expanded .stack-detail {
-  max-height: 200px;
-  opacity: 1;
 }
